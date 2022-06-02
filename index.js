@@ -9,7 +9,7 @@ const app = express();
 passport.use( new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
-    callbackURL: '/auth/google//callback'
+    callbackURL: '/auth/google/callback'
 } , (accessToken) => {
     console.log(accessToken);
 }));
@@ -17,6 +17,10 @@ passport.use( new GoogleStrategy({
 app.get('/', (req, res)=> {
     res.send({ hi : "Muwonge"});
 });
+
+app.get('/auth/google', passport.authenticate('google', {
+     scope: ['profile' , 'email']  
+}));
 
 
 const PORT = process.env.PORT || 5000;
