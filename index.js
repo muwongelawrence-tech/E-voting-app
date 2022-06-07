@@ -18,6 +18,10 @@ app.get('/', (req, res)=> {
     res.send({ hi : "Muwonge"});
 });
 
+app.get('/api/users', (req, res)=> {
+    res.send({ name : "Muwonge Lawrence", email : "muwongelawrence44@gmail.com"});
+});
+
 app.get('/auth/google', passport.authenticate('google', {
      scope: ['profile' , 'email']  
 }));
