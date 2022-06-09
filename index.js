@@ -17,13 +17,15 @@ passport.use( new GoogleStrategy({
 }));
 
 app.get('/', (req, res)=> {
-    res.send({ hi : "Muwonge"});
+    res.send({ hi : "Muwonge, how are you doing today"});
 });
 
 app.get('/api/users', (req, res)=> {
     res.send({ name : "Muwonge Lawrence", email : "muwongelawrence44@gmail.com"});
 });
 
+
+// getting authenticated using the google oauth
 app.get('/auth/google', passport.authenticate('google', {
      scope: ['profile' , 'email']  
 }));
