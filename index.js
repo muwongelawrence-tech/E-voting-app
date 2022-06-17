@@ -12,6 +12,10 @@ app.get('/', (req, res)=> {
     res.send({ hi : "Muwonge, how are you doing today"});
 });
 
+app.get('/api/authenticate', (req, res)=> {
+    res.send({ hi : "Muwonge, how are you doing today"});
+});
+
 app.get('/api/users', (req, res)=> {
     res.send({ name : "Muwonge Lawrence", email : "muwongelawrence44@gmail.com"});
 });
