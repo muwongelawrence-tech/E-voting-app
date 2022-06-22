@@ -15,20 +15,20 @@ passport.use( new GoogleStrategy({
     callbackURL: '/auth/google/callback'
 } , (accessToken , refreshToken , profile , done ) => {
 
-    User.findOne({ googleId: profile.id })
-    .then((existingUser) => {
-        if(existingUser){
-            // we already have a record with the given profile ID
-            done(null, existingUser); // tells passport that we are done successfully
-        } else {
-            // we don't have a user record with this ID, make a new record.
-            new User({ googleId : profile.id }).save()
-            .then(user => done(null, user)); // tells passport that we are done successfully
-        }
-    });
+    // User.findOne({ googleId: profile.id })
+    // .then((existingUser) => {
+    //     if(existingUser){
+    //         // we already have a record with the given profile ID
+    //         done(null, existingUser); // tells passport that we are done successfully
+    //     } else {
+    //         // we don't have a user record with this ID, make a new record.
+    //         new User({ googleId : profile.id }).save()
+    //         .then(user => done(null, user)); // tells passport that we are done successfully
+    //     }
+    // });
    
-    // console.log('accessToken', accessToken);
-    // console.log('refresh Token', refreshToken);
-    // console.log('profile', profile);
+    console.log('accessToken', accessToken);
+    console.log('refresh Token', refreshToken);
+    console.log('profile', profile);
 }));
 

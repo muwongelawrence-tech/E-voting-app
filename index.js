@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
-const app = express();
-require('./routes/authRoutes')(app);
 
+const app = express();
 mongoose.connect(keys.mongoURI);
 
 app.get('/', (req, res)=> {
