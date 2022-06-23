@@ -14,6 +14,7 @@ app.use(session({
 
 
 require('./routes/authRoutes')(app);
+
 // connecting to mongodb atlas in the cloud
 mongoose.connect(keys.mongoURI);
 
