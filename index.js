@@ -3,20 +3,13 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
-
 const app = express();
+require('./routes/authRoutes')(app);
+// connecting to mongodb atlas in the cloud
 mongoose.connect(keys.mongoURI);
 
 app.get('/', (req, res)=> {
     res.send({ hi : "Muwonge, how are you doing today"});
-});
-
-app.get('/api/authenticate', (req, res)=> {
-    res.send({ hi : "Muwonge, how are you doing today"});
-});
-
-app.get('/api/users', (req, res)=> {
-    res.send({ name : "Muwonge Lawrence", email : "muwongelawrence44@gmail.com"});
 });
 
 
