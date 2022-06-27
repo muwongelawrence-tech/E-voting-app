@@ -25,7 +25,6 @@ app.use(session({
     secret: 'melody hensley is my spirit animal' 
 }));
 
-
 require('./routes/authRoutes')(app);
 
 // connecting to mongodb atlas in the cloud
