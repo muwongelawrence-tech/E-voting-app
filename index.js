@@ -22,7 +22,8 @@ app.use(passport.session());
 app.use(session({
     resave: false,
     saveUninitialized: true,
-    secret: 'melody hensley is my spirit animal' 
+    secret: 'melody hensley is my spirit animal',
+    cookie: { secure: true } 
 }));
 
 require('./routes/authRoutes')(app);
