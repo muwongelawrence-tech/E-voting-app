@@ -32,7 +32,7 @@ require('./routes/authRoutes')(app);
 mongoose.connect(keys.mongoURI);
 
 app.get('/', (req, res)=> {
-    res.send({ hi : "Muwonge, how are you doing today"});
+    res.send({ hi : "Muwonge, how are you doing today,lets explore our API shortly."});
 });
 
 
