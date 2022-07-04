@@ -5,8 +5,9 @@ import {createStore , applyMiddleware} from 'redux';
 import './index.css';
 import App from './compontents/App';
 import reportWebVitals from './reportWebVitals';
+import reducers from './reducers';
 
-const store = createStore(() => [],{}, applyMiddleware());
+const store = createStore(reducers,{}, applyMiddleware());
 // const store = createStore();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
