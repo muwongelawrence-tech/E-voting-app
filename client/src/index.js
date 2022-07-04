@@ -7,6 +7,7 @@ import App from './compontents/App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(() => [],{}, applyMiddleware());
+// const store = createStore();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
