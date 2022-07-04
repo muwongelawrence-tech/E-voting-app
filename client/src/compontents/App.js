@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 
 // const Header = () => <h2>header</h2>
-// const Dashboard = () => <h2>header</h2>
+ const Dashboard = () => <h2>Dashboard...</h2>
 // const  SurveyNew = () => <h2>header</h2>
 //const Landing = () => <div>Landing...</div>
 
@@ -16,9 +16,14 @@ function App() {
        <BrowserRouter>
            <div>
                  <Switch>
-                      <Route path ="/">
+                      <Route exact = {true} path ="/">
                         <Landing />
                       </Route>
+
+                      <Route  path ="/dashboard">
+                        <Dashboard/>
+                      </Route>
+
                   </Switch>
       
            </div>
