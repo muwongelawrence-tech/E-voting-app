@@ -1,25 +1,32 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 
-const Header = () => <h2>header</h2>
-const Dashboard = () => <h2>header</h2>
-const  SurveyNew = () => <h2>header</h2>
+// const Header = () => <h2>header</h2>
+// const Dashboard = () => <h2>header</h2>
+// const  SurveyNew = () => <h2>header</h2>
 //const Landing = () => <div>Landing...</div>
+
+//  <a href="http://localhost:5000/auth/google"> Sign In with Google </a> 
+//  <a href="/auth/google"> Sign In with Google </a> 
 
 function App() {
   return (
     <div >
        <BrowserRouter>
-           <Routes>
-               <Route path ="/landing" component = { Landing } />
-             </Routes>
-            
+           <div>
+                 <Switch>
+                      <Route path ="/">
+                        <Landing />
+                      </Route>
+                  </Switch>
+      
+           </div>
         </BrowserRouter>
-       {/* <a href="http://localhost:5000/auth/google"> Sign In with Google </a> */}
-        {/* <a href="/auth/google"> Sign In with Google </a> */}
       </div>
   );
 }
 
 export default App;
+
+
