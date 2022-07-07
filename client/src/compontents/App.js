@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
+import Header from './Header';
 
 // const Header = () => <h2>header</h2>
  const Dashboard = () => <h2>Dashboard...</h2>
@@ -15,6 +16,7 @@ function App() {
     <div >
        <BrowserRouter>
            <div>
+               <Header/>
                  <Switch>
                       <Route exact path ="/">
                         <Landing />
