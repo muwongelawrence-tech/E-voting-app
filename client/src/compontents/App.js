@@ -16,7 +16,7 @@ function App() {
        <BrowserRouter>
            <div>
                  <Switch>
-                      <Route exact = {true} path ="/">
+                      <Route exact path ="/">
                         <Landing />
                       </Route>
 
