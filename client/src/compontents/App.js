@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import Header from './Header';
 import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 // const Header = () => <h2>header</h2>
  const Dashboard = () => <h2>Dashboard...</h2>
