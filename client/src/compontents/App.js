@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import Header from './Header';
+import { useEffect } from 'react';
 
 // const Header = () => <h2>header</h2>
  const Dashboard = () => <h2>Dashboard...</h2>
@@ -12,6 +13,11 @@ import Header from './Header';
 //  <a href="/auth/google"> Sign In with Google </a> 
 
 function App() {
+  // call to the useffect
+  useEffect(() => {
+
+  },[]);
+
   return (
     <div >
        <BrowserRouter>
