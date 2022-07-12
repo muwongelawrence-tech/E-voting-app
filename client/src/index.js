@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import {createStore , applyMiddleware} from 'redux';
 import './index.css';
-import App from './compontents/App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import reducers from './reducers';
 import reduxThunk from 'redux-thunk';
