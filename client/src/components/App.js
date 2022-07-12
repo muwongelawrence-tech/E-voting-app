@@ -14,11 +14,11 @@ import * as actions from '../actions';
 //  <a href="http://localhost:5000/auth/google"> Sign In with Google </a> 
 //  <a href="/auth/google"> Sign In with Google </a> 
 
-function App() {
+function App(props) {
   // call to the useffect
   useEffect(() => {
-
-  },[]);
+     props.fetchUser();
+  });
 
   return (
     <div >
@@ -46,6 +46,6 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, actions)(App);
 
 
