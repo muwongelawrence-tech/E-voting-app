@@ -1,18 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
-function Header() {
+function Header({ auth }) {
+
+   const renderContent = () => {
+       switch(auth){
+         case null:
+           return ;
+         case false:
+           return <li><a href="/auth/google">Login with Google</a></li>;
+         default:
+           return <li><a href="#">Logout</a></li>;
+       }
+   }
+
   return (
     <nav>
     <div className="nav-wrapper">
       <a href="#" className="brand-logo">Emaily</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="/auth/google">log in</a></li>
+          { renderContent() }
       </ul>
     </div>
   </nav>
   );
 }
 
-export default Header;
+function mapStateToProps({ auth }){
+   return { auth };
+}
+export default connect(mapStateToProps)(Header);
