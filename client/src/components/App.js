@@ -6,10 +6,8 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-// const Header = () => <h2>header</h2>
  const Dashboard = () => <h2>Dashboard...</h2>
  const  SurveyNew = () => <h2>SurveyNew</h2>
-//const Landing = () => <div>Landing...</div>
 
 //  <a href="http://localhost:5000/auth/google"> Sign In with Google </a> 
 //  <a href="/auth/google"> Sign In with Google </a> 
