@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-function Header({ auth }) {
+function Header({ auth ,user }) {
 
    const renderContent = () => {
        switch(auth){
@@ -17,7 +18,7 @@ function Header({ auth }) {
   return (
     <nav>
     <div className="nav-wrapper">
-      <a href="#" className="brand-logo">Emaily</a>
+      <Link to = { auth ? '/dashboard':'/' } className="brand-logo">Emaily</Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
           { renderContent() }
       </ul>
