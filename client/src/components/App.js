@@ -10,7 +10,8 @@ import * as actions from '../actions';
  const SurveyNew = () => <h2>Surveys</h2>
 
 //  <a href="http://localhost:5000/auth/google"> Sign In with Google </a> 
-//  <a href="/auth/google"> Sign In with Google </a> 
+//  <a href="/auth/google"> Sign In with Google </a>
+//  <a href="/auth/google"> Sign In with Google </a>  
 
 function App(props) {
   // call to the useffect
