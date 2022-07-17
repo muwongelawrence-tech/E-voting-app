@@ -11,10 +11,11 @@ import * as actions from '../actions';
 
 //  <a href="http://localhost:5000/auth/google"> Sign In with Google </a> 
 //  <a href="/auth/google"> Sign In with Google </a>
-//  <a href="/auth/google"> Sign In with Google </a>  
+//  <a href="/auth/google"> Sign In with Google </a> 
+//  <a href="/auth/google"> Sign In with Google </a> 
 
 function App(props) {
-  // call to the useffect
+  // call to the useffect to fecth user.
   useEffect(() => {
      props.fetchUser();
   });
