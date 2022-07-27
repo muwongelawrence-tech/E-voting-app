@@ -26,7 +26,9 @@ app.use(session({
     cookie: { secure: true } 
 }));
 
+// requiring routes
 require('./routes/authRoutes')(app);
+require('./routes/billingRoutes')(app);
 
 // connecting to mongodb atlas in the cloud
 mongoose.connect(keys.mongoURI);
